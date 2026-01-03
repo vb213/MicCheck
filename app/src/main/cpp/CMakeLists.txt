@@ -26,12 +26,19 @@ project("miccheck")
 # used in the AndroidManifest.xml file.
 add_library(${CMAKE_PROJECT_NAME} SHARED
         # List C/C++ source files with relative paths to this CMakeLists.txt.
-        native-lib.cpp)
+        native-lib.cpp
+        OboeAudioRecorder.cpp)
 
+set(OBOE_DIR C:/Users/Valentin/AndroidStudioProjects/MicCheck/oboe)
+add_subdirectory(${OBOE_DIR} ./oboe)
+include_directories(${OBOE_DIR}/include)
+target_include_directories(miccheck PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}) # <-- Add this line
 # Specifies libraries CMake should link to your target library. You
 # can link libraries from various origins, such as libraries defined in this
 # build script, prebuilt third-party libraries, or Android system libraries.
 target_link_libraries(${CMAKE_PROJECT_NAME}
         # List libraries link to the target library
         android
-        log)
+        log
+        oboe)

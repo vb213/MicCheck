@@ -7,4 +7,20 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!-- Core -->
+    <color name="background">#0E1116</color>
+    <color name="surface">#161B22</color>
+
+    <!-- Accent (teal / cyan audio vibe) -->
+    <color name="accent">#3DDCFF</color>
+    <color name="accentAlpha">#553DDCFF</color>
+
+    <!-- Text -->
+    <color name="textPrimary">#E6EDF3</color>
+    <color name="textSecondary">#9BA4AE</color>
+
+    <!-- States -->
+    <color name="error">#FF6B6B</color>
+    <color name="success">#4CAF50</color>
+
 </resources>
